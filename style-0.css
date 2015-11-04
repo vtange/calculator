@@ -32,7 +32,6 @@
 
 
 .calculator {
-  cursor: pointer;    
   border:3px solid green;
   border-top-left-radius: 8%;
   border-top-right-radius: 8%;   
@@ -56,23 +55,34 @@
   margin:auto;
   border:3px solid red;
   border-radius: 1em;
+  position: relative;
   overflow:hidden; /*limit childs within*/
 }
 
 .display{
   position: absolute;
-  background-color: green;
-    
-  width:0%;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color: dimgrey;
+  text-align: left;
+  padding:2%;
+  overflow:hidden;
 }
 
-.display-text {
-  position:relative; /* keep middle alignment*/
-  top: 50%; /*align vertical*/
-  transform: translateY(-50%); /*align vertical*/
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
+.entering {
+  position:absolute;
+  top:80%;
+  bottom:0;
+  right:0;
+  left:0;
+  padding:2%;
+  overflow:hidden;    
+}
+.entering hr{
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 .calc-button{
