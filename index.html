@@ -1,4 +1,4 @@
-<html data-ng-app="pomodoro">
+<html data-ng-app="calculator">
     <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style-0.css"/>
@@ -12,14 +12,14 @@
         <div name="slide1" id="slide1" class="slide">
             <div class="centered-text">
                 <hr></hr>
-                <article class="calculator">
+                <article class="calculator" data-ng-controller="MainCtrl as calc">
                   <h3><span>MakeShift Calculator</span></h3>
                   <div class="display-container">
                       <div class="display">
                                 <h3>5000</h3>
                           <div class="entering">
                             <hr>
-                                987x8845&#9612;
+                                {{storage.lastAns}}<span class="blinking">&#9612;</span>
                           </div>
                       </div>
                   </div>
@@ -27,14 +27,14 @@
                       <div class="button-area">
                             <table>
                             <tr>
-                                <td><button>ac</button></td>
-                                <td><button>ce</button></td>
+                                <td><button>clear</button></td>
+                                <td><button>^</button></td>
                                 <td><button>log</button></td>
                                 <td><button>ln</button></td>
                                 <td><button>&#247;</button></td>
                             </tr>
                             <tr>
-                                <td><button>^</button></td>
+                                <td><button>sqrt</button></td>
                                 <td><button>1</button></td>
                                 <td><button>2</button></td>
                                 <td><button>3</button></td>
