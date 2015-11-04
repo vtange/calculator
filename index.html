@@ -1,0 +1,48 @@
+<html data-ng-app="pomodoro">
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style-0.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    </head>
+  <body data-ng-controller="MainCtrl as pomo">
+        <div name="slide1" id="slide1" class="slide">
+            <div class="centered-text">
+                <hr></hr>
+                <h1>FreeCodeCamp</h1>
+                <div class="set-timer">
+                <span>break length</span><br>
+                    <h3 class="plusMinus" data-ng-click="lowerBreak()">-</h3><h2 class="plusMinus">{{timers.cooldown}}</h2><h3 class="plusMinus" data-ng-click="addBreak()">+</h3>
+                </div>
+                <div class="switch">
+                  <span>Swap</span>
+                  <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox" ng-disabled="!checkTimer()" data-ng-click="swapTimer()">
+                  <label for="cmn-toggle-4"></label>
+                </div>  
+                <div class="set-timer">
+                <span>session length</span><br>
+                    <h3 class="plusMinus" data-ng-click="lowerSession()">-</h3><h2 class="plusMinus">{{timers.session}}</h2><h3 class="plusMinus" data-ng-click="addSession()">+</h3>
+                </div>
+                
+                
+                
+                
+                <article class="clock" data-ng-click="toggleTimer()">
+                  <div class="progress-container">
+                      <div class="progress-bar">
+                      </div>
+                  </div>
+                  <div class="progress-text">
+                        <h3 data-ng-show="checkTimer()"><i class="fa fa-pause"></i>&#9612;&#9612;</h3>
+                        <h2>{{currentMode}}</h2>
+                        <h2>{{timeLeft}}</h2>
+                  </div>
+                </article>
+             <hr></hr>
+        </div>
+  </body>
+</html>
+      
