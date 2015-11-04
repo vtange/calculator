@@ -11,7 +11,17 @@ app.factory('memory', [function(){
 
 app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     $scope.storage = memory; // load service
+    $scope.entered = "";
     
+    $scope.enter = function(content){
+        $scope.entered =  $scope.entered.concat(content);
+    };
+    $scope.backspace = function(){
+        $scope.entered =  $scope.entered;
+    };
+    $scope.clear = function(){
+        $scope.entered = "";
+    };
     
 }]);//end of controller
 
