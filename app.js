@@ -12,6 +12,7 @@ app.factory('memory', [function(){
 app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     $scope.storage = memory; // load service
     $scope.entered = "";
+    $scope.answer = "";
     
     $scope.enter = function(content){
         $scope.entered =  $scope.entered.concat(content);
@@ -20,6 +21,10 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
         $scope.entered =  $scope.entered.substring(0, $scope.entered.length - 1);
     };
     $scope.clear = function(){
+        $scope.entered = "";
+    };
+    $scope.evaluate = function(){
+        $scope.answer = Parser.evaluate($scope.entered);
         $scope.entered = "";
     };
     

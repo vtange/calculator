@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="parser.js"></script>
     </head>
   <body>
         <div name="slide1" id="slide1" class="slide">
@@ -17,6 +18,7 @@
                   <div class="display-container">
                       <div class="display">
                                 <h3>5000</h3>
+                                <h3>{{answer}}</h3>
                           <div class="entering">
                             <hr>
                                 {{entered}}<span class="blinking">&#9612;</span>
@@ -38,28 +40,28 @@
                                 <td><button data-ng-click="enter(1)">1</button></td>
                                 <td><button data-ng-click="enter(2)">2</button></td>
                                 <td><button data-ng-click="enter(3)">3</button></td>
-                                <td><button>x</button></td>
+                                <td><button data-ng-click="enter('x')">x</button></td>
                             </tr>
                             <tr>
                                 <td><button>sin</button></td>
                                 <td><button data-ng-click="enter(4)">4</button></td>
                                 <td><button data-ng-click="enter(5)">5</button></td>
                                 <td><button data-ng-click="enter(6)">6</button></td>
-                                <td><button>-</button></td>
+                                <td><button data-ng-click="enter('-')">-</button></td>
                             </tr>
                             <tr>
                                 <td><button>cos</button></td>
                                 <td><button data-ng-click="enter(7)">7</button></td>
                                 <td><button data-ng-click="enter(8)">8</button></td>
                                 <td><button data-ng-click="enter(9)">9</button></td>
-                                <td><button>+</button></td>
+                                <td><button data-ng-click="enter('+')">+</button></td>
                             </tr>
                             <tr>
                                 <td><button>tan</button></td>
                                 <td><button data-ng-click="enter('.')">.</button></td>
                                 <td><button data-ng-click="enter(0)">0</button></td>
                                 <td><button>(-)</button></td>
-                                <td><button>Enter</button></td>
+                                <td><button data-ng-click="evaluate()">Enter</button></td>
                             </tr>
                             </table>
                       </div>
