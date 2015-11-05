@@ -24,13 +24,13 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
         $scope.entered = "";
     };
     $scope.prefix = function(content){
-        var lastNum = /(\d+)(?!.*\d)/g
+        var lastNum = /([()\w]+)(?!.*\d)/g
         var replacement = "(" + content + $scope.entered.match(lastNum) + ")";
         $scope.entered = $scope.entered.replace(lastNum,"");
         $scope.entered = $scope.entered.concat(replacement);
     };
     $scope.wrapper = function(content){
-        var lastNum = /(\d+)(?!.*\d)/g
+        var lastNum = /([()\w]+)(?!.*\d)/g
         var replacement = content + "(" + $scope.entered.match(lastNum) + ")";
         $scope.entered = $scope.entered.replace(lastNum,"");
         $scope.entered = $scope.entered.concat(replacement);
