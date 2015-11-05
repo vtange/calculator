@@ -18,7 +18,7 @@
                   <div class="display-container">
                       <div class="display">
                                 <h3>5000</h3>
-                                <h3>{{answer}}</h3>
+                                <h3>{{storage.lastAns}}</h3>
                           <div class="entering">
                             <hr>
                                 {{entered}}<span class="blinking">&#9612;</span>
@@ -60,7 +60,7 @@
                                 <td><button>tan</button></td>
                                 <td><button data-ng-click="enter('.')">.</button></td>
                                 <td><button data-ng-click="enter(0)">0</button></td>
-                                <td><button>(-)</button></td>
+                                <td><button data-ng-click="prefix('-')">(-)</button></td>
                                 <td><button data-ng-click="evaluate()">Enter</button></td>
                             </tr>
                             </table>
