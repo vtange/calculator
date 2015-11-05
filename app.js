@@ -4,7 +4,7 @@ var app = angular.module('calculator',[]);
 
 app.factory('memory', [function(){
   var storage = {
-      lastAns:1,
+      lastAns:null,
   };
   return storage;
 }]);//end of service
@@ -12,7 +12,7 @@ app.factory('memory', [function(){
 app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     $scope.storage = memory; // load service
     $scope.entered = "";
-    $scope.answer = "";
+    $scope.lastEntered = "";
     
     $scope.enter = function(content){
         $scope.entered =  $scope.entered.concat(content);
@@ -38,6 +38,7 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     $scope.evaluate = function(){
         $scope.answer = Parser.evaluate($scope.entered);
         $scope.storage.lastAns = Parser.evaluate($scope.entered);
+        $scope.lastEntered = $scope.entered;
         $scope.entered = "";
     };
     
