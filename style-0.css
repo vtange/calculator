@@ -84,6 +84,21 @@ margin-bottom: 0px;
 .answer {
     text-align: right;
 }
+.blinking {
+      animation: blink 1s steps(5, start) infinite;
+      -webkit-animation: blink 1s steps(5, start) infinite;
+}
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+    @-webkit-keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
 
 
 
@@ -99,7 +114,6 @@ margin-bottom: 0px;
   padding:8%;
 }
 table, tr, td{
-border:1px solid white;
 text-align: center;
 color:white;
 }
