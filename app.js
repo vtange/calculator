@@ -29,6 +29,12 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
         $scope.entered = $scope.entered.replace(lastNum,"");
         $scope.entered = $scope.entered.concat(replacement);
     };
+    $scope.wrapper = function(content){
+        var lastNum = /(\d+)(?!.*\d)/g
+        var replacement = content + "(" + $scope.entered.match(lastNum) + ")";
+        $scope.entered = $scope.entered.replace(lastNum,"");
+        $scope.entered = $scope.entered.concat(replacement);
+    };
     $scope.evaluate = function(){
         $scope.answer = Parser.evaluate($scope.entered);
         $scope.storage.lastAns = Parser.evaluate($scope.entered);
