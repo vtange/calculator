@@ -4,8 +4,10 @@ var app = angular.module('calculator',[]);
 
 app.factory('memory', [function(){
   var storage = {
-      lastEntered:null,
-      lastAns:null,
+      SndLastEntered:"",
+      SndLastAns:"",
+      lastEntered:"",
+      lastAns:"",
   };
   return storage;
 }]);//end of service
@@ -37,6 +39,10 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     };
     $scope.evaluate = function(){
         $scope.answer = Parser.evaluate($scope.entered);
+        
+        $scope.storage.SndLastAns = $scope.storage.lastAns;
+        $scope.storage.SndLastEntered = $scope.storage.lastEntered;
+        
         $scope.storage.lastAns = Parser.evaluate($scope.entered);
         $scope.storage.lastEntered = $scope.entered;
         $scope.entered = "";
