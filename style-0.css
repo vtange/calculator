@@ -26,11 +26,9 @@
     text-transform: uppercase;
 }
 
-
-
-
-
-
+/*--------*/
+/*--calc--*/
+/*--------*/
 .calculator {
   border:3px solid green;
   border-top-left-radius: 8%;
@@ -101,7 +99,9 @@ margin-bottom: 0px;
 
 
 
-
+/*--------*/
+/*--buttons--*/
+/*--------*/
 .button-fallback {
   position: relative;
 }

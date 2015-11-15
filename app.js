@@ -13,7 +13,7 @@ app.factory('memory', [function(){
 }]);//end of service
 
 app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
-    $scope.storage = memory; // load service
+    $scope.storage = memory; // load service for practice. making my life more complicated for no reason :)
     $scope.entered = "";
     
     $scope.enter = function(content){
