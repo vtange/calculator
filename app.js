@@ -17,7 +17,9 @@ app.controller('MainCtrl', ['$scope', 'memory', function($scope, memory){
     $scope.entered = "";
     
     $scope.enter = function(content){
+        if ($scope.entered.length < 40){
         $scope.entered =  $scope.entered.concat(content);
+        }
     };
     $scope.backspace = function(){
         $scope.entered =  $scope.entered.substring(0, $scope.entered.length - 1);
