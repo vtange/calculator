@@ -21,9 +21,3 @@
  ```
  - Math Evaluation Plugin - Parser.js
  - Regex to manipulate input Expression via buttons.
-
-HINDSIGHT
-
- - Use "String" +=/ + "String2" instead of String.concat(String2) for performance
- - Repeated myself a lot
- 
