@@ -1,8 +1,16 @@
+![alt tag](http://res.cloudinary.com/dmj8qtant/image/upload/c_limit,w_600/v1461881274/ti89_ikhxus.png)
 # calculator
 
-# Takeaways
- - CSS -> __% vs __px rounded borders.
- - CSS -> Blinking Cursor
+## Tech
+AngularJS, ParserJS
+
+## Niceties
+Math-based String Regex
+
+### Details
+#### CSS
+ - __% vs __px rounded borders.
+ - Blinking Cursor
 ```
 .blinking {
       animation: blink 1s steps(5, start) infinite;
@@ -19,5 +27,5 @@
       }
     }
  ```
- - Math Evaluation Plugin - Parser.js
- - Regex to manipulate input Expression via buttons.
+#### JS
+ - none
